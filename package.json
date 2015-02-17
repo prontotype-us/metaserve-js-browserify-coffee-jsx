@@ -1,11 +1,11 @@
 {
-    "name": "metaserve-js-browserify-coffee-jsx",
+    "name": "metaserve-js-coffee-reactify",
     "version": "0.0.4",
-    "description": "metaserve plugin for rendering Javascript from .coffee files with Browserify and Coffee-Reactify",
-    "homepage": "http://github.com/prontotype-us/metaserve-js-browserify-coffee-jsx",
+    "description": "metaserve plugin for rendering Javascript from .coffee files with JSX using Browserify and Coffee-Reactify",
+    "homepage": "http://github.com/prontotype-us/metaserve-js-coffee-reactify",
     "repository": {
         "type": "git",
-        "url": "http://github.com/prontotype-us/metaserve-js-browserify-coffee-jsx.git"
+        "url": "http://github.com/prontotype-us/metaserve-js-coffee-reactify"
     },
     "author": {
         "name": "Sean Robertson",
