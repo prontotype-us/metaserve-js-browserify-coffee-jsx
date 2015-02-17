@@ -1,7 +1,7 @@
 fs = require 'fs'
 browserify = require 'browserify'
 coffee_reactify = require 'coffee-reactify'
-{BrowserifyCompiler} = require 'metaserve-browserify'
+{BrowserifyCompiler} = require 'metaserve-js-browserify'
 require('node-cjsx').transform()
 
 class BrowserifyCoffeeJSXCompiler extends BrowserifyCompiler
