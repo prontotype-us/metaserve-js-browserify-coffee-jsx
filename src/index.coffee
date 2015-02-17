@@ -7,7 +7,6 @@ require('node-cjsx').transform()
 class BrowserifyCoffeeJSXCompiler extends BrowserifyCompiler
 
     default_options:
-        base_dir: './static/js'
         ext: 'coffee'
         browserify:
             extensions: ['.coffee']
