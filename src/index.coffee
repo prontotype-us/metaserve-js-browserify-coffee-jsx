@@ -11,7 +11,7 @@ class BrowserifyCoffeeJSXCompiler extends BrowserifyCompiler
         browserify:
             extensions: ['.coffee']
         browserify_shim: false
-        uglify: true
+        uglify: false
 
     beforeBundle: (bundler) ->
         bundler = bundler.transform(coffee_reactify)
