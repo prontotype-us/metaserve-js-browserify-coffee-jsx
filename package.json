@@ -1,6 +1,6 @@
 {
     "name": "metaserve-js-coffee-reactify",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "metaserve plugin for rendering Javascript from .coffee files with JSX using Browserify and Coffee-Reactify",
     "homepage": "http://github.com/prontotype-us/metaserve-js-coffee-reactify",
     "repository": {
