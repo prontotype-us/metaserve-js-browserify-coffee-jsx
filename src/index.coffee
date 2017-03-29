@@ -1,25 +1,26 @@
 fs = require 'fs'
-browserify = require 'browserify'
 coffee_reactify = require 'coffee-reactify'
-{BrowserifyCompiler} = require 'metaserve-js-browserify'
+metaserve_js_browserify = require 'metaserve-js-browserify'
 require('node-cjsx').transform()
 
-class BrowserifyCoffeeJSXCompiler extends BrowserifyCompiler
+VERBOSE = process.env.METASERVE_VERBOSE?
 
-    default_options:
-        ext: 'coffee'
+module.exports =
+    ext: 'coffee'
+
+    default_config:
+        content_type: 'application/javascript'
         browserify:
             extensions: ['.coffee']
         browserify_shim: false
         uglify: false
 
-    beforeBundle: (bundler) ->
-        bundler = bundler.transform(coffee_reactify)
-        if @options.browserify_shim
-            bundler = bundler.transform require 'browserify-shim'
-        if @options.uglify
-            bundler = bundler.transform {global: true}, 'uglifyify'
-        return bundler
+    compile: (filename, config, context, cb) ->
+        console.log '[CoffeeReactifyCompiler.compile]', filename, config if VERBOSE
 
-module.exports = (options={}) -> new BrowserifyCoffeeJSXCompiler(options)
+        config.beforeBundle = (bundler) ->
+            bundler = bundler.transform(coffee_reactify)
+            return bundler
+
+        metaserve_js_browserify.compile filename, config, context, cb
 
