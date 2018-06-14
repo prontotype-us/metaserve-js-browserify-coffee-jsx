@@ -13,7 +13,6 @@ module.exports =
         browserify:
             extensions: ['.coffee']
         browserify_shim: false
-        uglify: false
 
     compile: (filename, config, context, cb) ->
         console.log '[CoffeeReactifyCompiler.compile]', filename, config if VERBOSE
